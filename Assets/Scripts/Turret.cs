@@ -5,19 +5,13 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    GameObject enemyLocked;
-    bool isLocked = false;
+    List<GameObject> enemyInTarget = new List<GameObject>();
 
     private void FixedUpdate()
     {
-        if (enemyLocked == null)
+        if (enemyInTarget.Count > 0)
         {
-            isLocked = false;
-        }
-
-        if (isLocked)
-        {
-            transform.LookAt(new Vector3(enemyLocked.transform.position.x, transform.position.y, enemyLocked.transform.position.z));
+            transform.LookAt(new Vector3(enemyInTarget[0].transform.position.x, transform.position.y, enemyInTarget[0].transform.position.z));
         }
     }
 
@@ -25,8 +19,15 @@ public class Turret : MonoBehaviour
     {
         if (other.CompareTag("Enemy"))
         {
-            enemyLocked = other.gameObject;
-            isLocked = true;
+            enemyInTarget.Add(other.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Enemy"))
+        {
+            enemyInTarget.RemoveAt(0);
         }
     }
 }
