@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Character : MonoBehaviour
 {
-    [SerializeField] float maxHP;
+    [SerializeField] protected float maxHP;
 
     protected float actualHP;
 

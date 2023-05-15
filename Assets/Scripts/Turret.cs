@@ -5,7 +5,17 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    List<GameObject> enemyInTarget = new List<GameObject>();
+    protected List<GameObject> enemyInTarget = new List<GameObject>();
+
+    private void Awake()
+    {
+        Enemy.onEnemyDead += RemovingEnemy;
+    }
+
+    private void OnDisable()
+    {
+        Enemy.onEnemyDead -= RemovingEnemy;
+    }
 
     private void FixedUpdate()
     {
@@ -29,5 +39,10 @@ public class Turret : MonoBehaviour
         {
             enemyInTarget.RemoveAt(0);
         }
+    }
+
+    void RemovingEnemy(GameObject enemy)
+    {
+        enemyInTarget.RemoveAt(0);
     }
 }
