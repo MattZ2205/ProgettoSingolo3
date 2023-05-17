@@ -13,7 +13,7 @@ public class Character : MonoBehaviour
         actualHP = maxHP;
     }
 
-    protected void TakeDamage(float damage)
+    public void TakeDamage(float damage)
     {
         actualHP -= damage;
         CheckDeath();

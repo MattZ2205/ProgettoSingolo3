@@ -6,9 +6,6 @@ using UnityEngine;
 public class Enemy : Character
 {
     Spawner sp;
-    public delegate void EnemyDeath(GameObject enemy);
-    public static EnemyDeath onEnemyDead;
-    bool isCancello = false;
 
     private void Awake()
     {
@@ -19,9 +16,7 @@ public class Enemy : Character
     {
         if (collision.transform.CompareTag("Barrier"))
         {
-            isCancello = true;
-            gameObject.SetActive(false);
-            sp.AddDeadEnemy(gameObject);
+            TakeDamage(maxHP);
         }
 
         if (collision.transform.CompareTag("Bullet"))
@@ -33,12 +28,11 @@ public class Enemy : Character
 
     private void OnDisable()
     {
-        if (!isCancello) onEnemyDead?.Invoke(gameObject);
+        sp.AddDeadEnemy(gameObject);
     }
 
     private void OnEnable()
     {
         actualHP = maxHP;
-        isCancello = false;
     }
 }

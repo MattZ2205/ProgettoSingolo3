@@ -7,21 +7,12 @@ public class Turret : MonoBehaviour
 {
     protected List<GameObject> enemyInTarget = new List<GameObject>();
 
-    private void Awake()
-    {
-        Enemy.onEnemyDead += RemovingEnemy;
-    }
-
-    private void OnDisable()
-    {
-        Enemy.onEnemyDead -= RemovingEnemy;
-    }
-
     private void FixedUpdate()
     {
         if (enemyInTarget.Count > 0)
         {
-            transform.LookAt(new Vector3(enemyInTarget[0].transform.position.x, transform.position.y, enemyInTarget[0].transform.position.z));
+            if (enemyInTarget[0].activeSelf) transform.LookAt(new Vector3(enemyInTarget[0].transform.position.x, transform.position.y, enemyInTarget[0].transform.position.z));
+            else enemyInTarget.RemoveAt(0);
         }
     }
 
@@ -39,10 +30,5 @@ public class Turret : MonoBehaviour
         {
             enemyInTarget.RemoveAt(0);
         }
-    }
-
-    void RemovingEnemy(GameObject enemy)
-    {
-        enemyInTarget.RemoveAt(0);
     }
 }

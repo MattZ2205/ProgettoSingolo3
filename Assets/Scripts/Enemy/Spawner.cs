@@ -14,16 +14,6 @@ public class Spawner : MonoBehaviour
     List<GameObject> deadEnemy = new List<GameObject>();
     float timer;
 
-    private void Awake()
-    {
-        Enemy.onEnemyDead += AddDeadEnemy;
-    }
-
-    private void OnDisable()
-    {
-        Enemy.onEnemyDead -= AddDeadEnemy;
-    }
-
     private void Start()
     {
         timer = spawnTime;

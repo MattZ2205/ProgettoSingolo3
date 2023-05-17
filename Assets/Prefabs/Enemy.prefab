@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3529065884557381168}
   - component: {fileID: 3529065884557381170}
   - component: {fileID: 2155794322609765198}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   points: []
   ind: 0
-  speed: 5
+  speed: 3
 --- !u!114 &2155794322609765198
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d2acda2ff6bc3a41901e426fd275d60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 7
+  maxHP: 10
 --- !u!1 &3529065884876528252
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 3529065884876528253}
   - component: {fileID: 3529065884876528128}
   - component: {fileID: 3529065884876528131}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
