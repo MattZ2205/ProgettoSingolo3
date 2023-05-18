@@ -2,14 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Transactions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Gate : Character
 {
     [SerializeField] float damage;
+    [SerializeField] Image hpBar;
 
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Enemy"))
+        hpBar.fillAmount = Mathf.Max(0, actualHP / 100);
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.transform.CompareTag("Enemy"))
         {
             TakeDamage(damage);
         }
@@ -17,6 +25,6 @@ public class Gate : Character
 
     private void OnDisable()
     {
-        //LoseGame
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }
