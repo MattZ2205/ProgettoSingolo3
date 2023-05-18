@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class TurretShoot : Turret
 {
-    public float rateo;
-    public GameObject bullet;
+    [SerializeField] float rateo;
+    [SerializeField] GameObject bullet;
     [SerializeField] Transform muzzle;
 
     float timer;

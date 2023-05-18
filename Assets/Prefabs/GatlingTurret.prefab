@@ -142,7 +142,7 @@ GameObject:
   - component: {fileID: 5404497288951253248}
   m_Layer: 0
   m_Name: GatlingTurret
-  m_TagString: Turret
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,8 +190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fecc27780c7015f48a53c482237fb81c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 10
-  rateo: 0.7
+  rateo: 0.5
   bullet: {fileID: 2618048020011328839, guid: 2f7bac6119ac38a4fa40ac9eba04c366, type: 3}
   muzzle: {fileID: 5404497288657714575}
 --- !u!1 &5404497289194225300

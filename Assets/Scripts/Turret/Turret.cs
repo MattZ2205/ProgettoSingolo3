@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    public float range;
     protected List<GameObject> enemyInTarget = new List<GameObject>();
 
     private void FixedUpdate()
@@ -15,8 +14,6 @@ public class Turret : MonoBehaviour
             if (enemyInTarget[0].activeSelf) transform.LookAt(new Vector3(enemyInTarget[0].transform.position.x, transform.position.y, enemyInTarget[0].transform.position.z));
             else enemyInTarget.RemoveAt(0);
         }
-
-        GetComponent<SphereCollider>().radius = range;
     }
 
     private void OnTriggerEnter(Collider other)
