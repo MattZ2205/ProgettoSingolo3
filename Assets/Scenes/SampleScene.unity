@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,9 +156,20 @@ MonoBehaviour:
   - {fileID: 5687558107530061803, guid: 6ee192bb840ad2040874dbbbd5f7b90a, type: 3}
   - {fileID: 8146633819675893709, guid: ca63967d70e778d438047c245cd0f3f6, type: 3}
   - {fileID: 5404497288951253253, guid: 53c37c1a117e11b46a5345725964f090, type: 3}
+  - {fileID: 7692570261332092977, guid: 19fc7bfeb014e4f4c82278691497c34d, type: 3}
+  - {fileID: 6528934626264763705, guid: 351db0e6dba4fd84cbc5044a69de1128, type: 3}
+  - {fileID: 5320276979592416524, guid: d1ad9639f980d53419afbcc8c56e87f9, type: 3}
   mask:
     serializedVersion: 2
     m_Bits: 2048
+  initialTime: 5.4
+  texts:
+  - {fileID: 476183838}
+  - {fileID: 997457384}
+  - {fileID: 1142460359}
+  - {fileID: 639929486}
+  - {fileID: 15268477}
+  - {fileID: 1066604007}
 --- !u!4 &10594239
 Transform:
   m_ObjectHideFlags: 0
@@ -259,7 +270,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.65
+  m_fontSize: 14
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -395,6 +406,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 10594238}
         m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
+        m_MethodName: ColorButtonPress
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 29334885}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 10594238}
+        m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
         m_MethodName: ButtonPress
         m_Mode: 3
         m_Arguments:
@@ -442,6 +465,82 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29334883}
+  m_CullTransparentMesh: 1
+--- !u!1 &46702121
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 46702122}
+  - component: {fileID: 46702124}
+  - component: {fileID: 46702123}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &46702122
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46702121}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0000011163}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1413805494}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0.000009655952, y: -0.00000011920929}
+  m_SizeDelta: {x: -0.000019789, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &46702123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46702121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ba7a921793454e9479acecb687fc6539, type: 3}
+  m_Type: 3
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 0
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &46702124
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 46702121}
   m_CullTransparentMesh: 1
 --- !u!1 &65312480
 GameObject:
@@ -527,6 +626,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 10594238}
+        m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
+        m_MethodName: ColorButtonPress
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 65312482}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 10594238}
         m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
         m_MethodName: ButtonPress
@@ -688,7 +799,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5daf0bef81540a469c73e08bc8b1bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turrets: []
 --- !u!1 &188219766
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,6 +1080,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 10594238}
         m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
+        m_MethodName: ColorButtonPress
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 470233088}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 10594238}
+        m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
         m_MethodName: ButtonPress
         m_Mode: 3
         m_Arguments:
@@ -1103,7 +1225,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.55
+  m_fontSize: 14.85
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1433,7 +1555,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17.1
+  m_fontSize: 15.05
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1796,6 +1918,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 10594238}
         m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
+        m_MethodName: ColorButtonPress
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 794209400}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 10594238}
+        m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
         m_MethodName: ButtonPress
         m_Mode: 3
         m_Arguments:
@@ -2111,6 +2245,18 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 10594238}
         m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
+        m_MethodName: ColorButtonPress
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 959530658}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 10594238}
+        m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
         m_MethodName: ButtonPress
         m_Mode: 3
         m_Arguments:
@@ -2236,7 +2382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: 0.8140987, z: -0.5807266, w: 0}
-  m_LocalPosition: {x: 7.62, y: 21.13, z: 21.56}
+  m_LocalPosition: {x: 7.62, y: 23.49, z: 21.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2328,7 +2474,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.65
+  m_fontSize: 18.6
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2494,7 +2640,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14.75
+  m_fontSize: 13.25
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2655,7 +2801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5daf0bef81540a469c73e08bc8b1bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turrets: []
 --- !u!1 &1142460357
 GameObject:
   m_ObjectHideFlags: 0
@@ -2741,7 +2886,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16.5
+  m_fontSize: 14.8
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3108,7 +3253,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e5daf0bef81540a469c73e08bc8b1bec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  turrets: []
 --- !u!1 &1411391418
 GameObject:
   m_ObjectHideFlags: 0
@@ -3207,6 +3351,107 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411391418}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1413805493
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1413805494}
+  - component: {fileID: 1413805497}
+  - component: {fileID: 1413805496}
+  - component: {fileID: 1413805495}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1413805494
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413805493}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: -0.0468}
+  m_LocalScale: {x: 1, y: 0.23769341, z: 0.21357481}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 46702122}
+  m_Father: {fileID: 1821605225}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.66, y: 0.7072}
+  m_SizeDelta: {x: 1.2316, y: 1.1629}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1413805495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413805493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1413805496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413805493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &1413805497
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413805493}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1492012957
 GameObject:
   m_ObjectHideFlags: 0
@@ -3335,6 +3580,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 10594238}
+        m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
+        m_MethodName: ColorButtonPress
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1593795413}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 10594238}
         m_TargetAssemblyTypeName: PositioningManager, Assembly-CSharp
         m_MethodName: ButtonPress
@@ -3902,8 +4159,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.66044617, y: 1, z: 1}
+  m_Center: {x: 0.16977692, y: 0, z: 0}
 --- !u!4 &1821605225
 Transform:
   m_ObjectHideFlags: 0
@@ -3915,7 +4172,8 @@ Transform:
   m_LocalPosition: {x: 26.05, y: 0.49, z: 16.15}
   m_LocalScale: {x: 1, y: 4.2071, z: 4.6822}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1413805494}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3933,6 +4191,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   damage: 10
+  hpBar: {fileID: 46702123}
 --- !u!1 &1996883090
 GameObject:
   m_ObjectHideFlags: 0
